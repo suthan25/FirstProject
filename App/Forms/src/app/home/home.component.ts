@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { SubjectService } from '../subject.service';
-import { interval } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

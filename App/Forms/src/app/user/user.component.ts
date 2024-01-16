@@ -18,7 +18,8 @@ export class UserComponent implements OnDestroy,OnInit{
    // this.Observe$ = this.service.Observe$.subscribe((x:any)=>console.log('user',x))
   //  this.Observe$ = this.service.Observe$.subscribe((x:any)=>console.log(x))
   //  this.service.Observe$.subscribe((x:any)=>this.data = x)
-   this.Observe$ = this.service.Obs$.subscribe((x)=>this.form.push(x))
+  // this.Observe$ = this.service.Obs$.subscribe((x)=>this.form.push(x))
+  this.Observe$ = this.service.getData()
    console.log(this.form)
   }
 }

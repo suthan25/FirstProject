@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { SubjectService } from '../subject.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject, Subject, interval } from 'rxjs';
 
 @Component({
   selector: 'app-child',
@@ -11,11 +11,12 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ChildComponent implements OnInit,OnDestroy{
   Form!: FormGroup;
   submit:boolean = false
+  subject$ = new ReplaySubject()
   constructor(private service:SubjectService,private fb:FormBuilder){}
   Submit(){
     // this.service.share(this.Form.valueChanges).subscribe((x)=>console.log(x))
     // console.log(this.Form.valueChanges.subscribe(x=>x))
-    this.service.shareForm(this.Form.value)
+    this.service.share(interval(1000))
   }
   ngOnInit(): void {
     this.Form = this.fb.group({

@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit,OnDestroy{
   form!: FormGroup;
   data:any[] = []
+  Observe$:any
   constructor(private fb:FormBuilder,private service:SubjectService,private http:HttpClient){}
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -21,6 +22,9 @@ export class HomeComponent implements OnInit,OnDestroy{
         })
       ])
     })
+   // this.service.Obs$.subscribe((val)=>this.data.push(val))
+   this.Observe$ = this.service.getData()
+    console.log(this.data)
   }
   get Array(){
     return (this.form.get('name') as FormArray).controls
@@ -43,6 +47,6 @@ export class HomeComponent implements OnInit,OnDestroy{
     this.data = (this.form.get('name') as FormArray).value
   }
   ngOnDestroy(): void {
-    
+    this.Observe$.unsubscribe()
   }
 }

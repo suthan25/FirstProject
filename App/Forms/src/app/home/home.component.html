@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<form [formGroup]="form">
+    <button type="button" (click)="Add()" class="btn btn-primary mt-4 ml-5">Add</button>
+    <div style="width: 45em;" class="ml-5">
+    <table class="table table-bordered">
+        <thead>
+            <th>Si.no</th>
+            <th>Name</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngFor="let key of Array;let i = index" formArrayName="name">
+            <tr [formGroupName]="i">
+                <td>{{i+1}}</td>
+                <td><input formControlName="input" class="form-control"></td>
+                <td><button type="button" (click)="delete(i)" class="btn btn-danger" [disabled]="i < 1">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <button type="button" class="btn btn-success ml-5" (click)="save()">Save</button>
+</form>
+<div style="width: 25em;" class="mt-4 ml-5">
+<table *ngIf="data.length >= 1" class="table table-bordered">
+    <thead>
+        <th>Si.no</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let key of data;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{key.input}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

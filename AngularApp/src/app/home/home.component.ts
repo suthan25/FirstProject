@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit{
     this.service.getUser()
   }
   search(term:number){
-    const options = term?{params:new HttpParams().set('userId',term)}:{}
+    const options = term?{params:new HttpParams().set('userId',term)}:{} //used ternary operator
     return this.http.get<any>('https://jsonplaceholder.typicode.com/todos/',options).subscribe((x:any)=>console.log(x))
   }
 }

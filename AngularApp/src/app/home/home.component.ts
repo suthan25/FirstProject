@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit{
     return this.http.get<any>('https://jsonplaceholder.typicode.com/todos/',options).subscribe((x:any)=>console.log(x))
   }
   child(){
-    let child = this.childData.emit(interval(500))
-    return child
+    this.service.message()
+    console.log('child')
+    // return child
   }
 }

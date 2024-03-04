@@ -1,2 +1,2 @@
 # FirstProject
-//simple examples for working with observables in angular
+//simple E-commerce website

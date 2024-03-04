@@ -1,0 +1,7 @@
+<div class="prod-container">
+    <ul *ngFor="let key of products" class="prod-list">
+    <li><img [src]="key.img" alt="prod-img"></li>
+    <li>Name : {{key.name}}</li>
+    <li class="rate">Rate : ₹{{key.rate}}</li>
+<li class="buy"><button type="button">buy</button></li></ul>
+</div>

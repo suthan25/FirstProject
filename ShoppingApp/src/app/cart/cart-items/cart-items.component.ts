@@ -12,4 +12,7 @@ export class CartItemsComponent implements OnInit{
   ngOnInit(): void {
     this.products = this.service.Selected
   }
+  removeItem(i:number){
+    this.service.Selected.splice(i,1)
+  }
 }

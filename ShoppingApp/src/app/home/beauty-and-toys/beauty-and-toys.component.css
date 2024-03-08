@@ -1,0 +1,30 @@
+.prod-list{
+    box-shadow: 4px 4px 8px rgb(207, 204, 204);
+    width: 23%;
+    list-style-type: none;
+    margin-left: 4.2rem;
+    border-radius: 5px;
+    height: 21em;
+}
+.prod-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.buy{
+    margin-left: 0em;
+}
+.rate{
+    margin-bottom: 1em;
+}
+li button{
+    height: 2em;
+    width: 5em;
+    background-color: rgba(233, 168, 38, 0.894);
+    border: none;
+    border-radius: 3px;
+}
+.add{
+    margin-left: 8em;
+    margin-top: -1.7em;
+}

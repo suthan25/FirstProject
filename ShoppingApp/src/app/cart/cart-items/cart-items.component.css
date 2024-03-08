@@ -24,3 +24,12 @@ li button{
     border: none;
     border-radius: 3px;
 }
+.remove{
+    margin-left: 8em;
+    margin-top: -1.7em;
+}
+.remove button:active{
+    background-color: rgba(234, 40, 40, 0.853);
+    color: rgb(39, 119, 43);
+    transition: 0.015s;
+}

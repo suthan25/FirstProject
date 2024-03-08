@@ -140,3 +140,8 @@ li button{
     border: none;
     border-radius: 3px;
 }
+.add button:active{
+    background-color: rgba(252, 142, 7, 0.911);
+    color: rgb(244, 7, 7);
+    transition: 0.015s;
+}

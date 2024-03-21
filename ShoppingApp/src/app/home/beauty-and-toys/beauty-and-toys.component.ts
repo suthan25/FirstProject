@@ -12,4 +12,7 @@ export class BeautyAndToysComponent implements OnInit{
     ngOnInit(): void {
     this.products = this.prodService.products.filter((x:any)=>x.type==='beauty')
     }
+    addItem(i:number){
+      this.prodService.selectProduct(i)
+    }
 }

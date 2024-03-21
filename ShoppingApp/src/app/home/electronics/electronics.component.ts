@@ -12,4 +12,7 @@ export class ElectronicsComponent implements OnInit{
     ngOnInit(): void {
     this.products = this.prodService.products.filter((x:any)=>x.type==='electronics')
     }
+    addItem(i:number){
+      this.prodService.selectProduct(i)
+    }
 }

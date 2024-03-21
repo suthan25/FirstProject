@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="logo">
+        <img src="..\assets\—Pngtree—online shop logo design icon_4825247.png" alt="">
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="user" class="form">
+        <input class="username" placeholder="username" formControlName="username">
+    </div>
+    <div class="passwrd" class="form" id="userpass">
+        <input class="pass" placeholder="password" formControlName="pass">
+    </div>
+    <div class="login" class="form" id="log">
+        <button type="submit">Login</button> 
+    </div>
+    <div id="signin" class="form">
+        Don't have an account? <a routerLink="userSignUp">Sign in.</a>
+    </div>
+</form>
+</div>

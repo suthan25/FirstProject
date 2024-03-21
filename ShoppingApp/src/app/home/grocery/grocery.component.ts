@@ -12,4 +12,7 @@ export class GroceryComponent implements OnInit{
   ngOnInit(): void {
     this.products = this.prodService.products.filter((x:any)=>x.type==='grocery')
   }
+  addItem(i:number){
+    this.prodService.selectProduct(i)
+  }
 }

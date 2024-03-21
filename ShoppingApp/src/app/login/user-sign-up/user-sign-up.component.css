@@ -1,0 +1,49 @@
+.container{
+    height: 29em;
+    width: 24em;
+    box-shadow: 7px 6px 8px 6px rgb(227, 230, 235);
+    margin-left: 29em;
+    margin-top: 5em;
+    border-radius: 4px;
+}
+.logo{
+    height: 8em;
+    width: 10em;
+    margin-left: 6.7em;
+}
+img{
+    height: 8em;
+    width: 10em;
+}
+.form{
+    margin-left: 3.4em;
+}
+input{
+    outline: none;
+    border: none;
+    height: 33px;
+    text-indent: 1em;
+    box-shadow: 7px 6px 8px 6px rgb(227, 230, 235);
+    border-radius: 3px;
+    width: 20em;
+}
+#userId,#passwrd{
+    margin-top: 2em;
+}
+button{
+    border: none;
+    height: 2.6em;
+    width: 20.2em;
+    border-radius: 18px;
+    box-shadow: 7px 6px 8px 6px rgb(227, 230, 235);
+    background-color: white;
+}
+#signin{
+    margin-left: 3.5em;
+    margin-top: 2.5em;
+}
+button:hover{
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    box-shadow: none;
+}

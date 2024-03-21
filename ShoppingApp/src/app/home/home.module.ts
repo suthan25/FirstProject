@@ -8,6 +8,7 @@ import { MobileComponent } from './mobile/mobile.component';
 import { FashionComponent } from './fashion/fashion.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import { BeautyAndToysComponent } from './beauty-and-toys/beauty-and-toys.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BeautyAndToysComponent } from './beauty-and-toys/beauty-and-toys.compon
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

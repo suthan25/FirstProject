@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="logo">
+        <img src="..\assets\—Pngtree—online shop logo design icon_4825247.png" alt="">
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form" id="username">
+        <input class="name" placeholder="Name" formControlName="name">
+    </div>
+    <div class="form" id="userId">
+        <input class="user" placeholder="Email" formControlName="username">
+    </div>
+    <div class="form" id="passwrd">
+        <input class="pass" placeholder="password" formControlName="pass">
+    </div>
+    <div id="signin">
+        <button type="submit">Sign in</button>
+    </div>
+</form>
+</div>

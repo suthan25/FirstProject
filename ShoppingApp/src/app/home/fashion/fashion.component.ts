@@ -12,4 +12,7 @@ export class FashionComponent implements OnInit{
   ngOnInit(): void {
     this.products = this.prodService.products.filter((x:any)=>x.type==='fashion')
   }
+  addItem(i:number){
+    this.prodService.selectProduct(i)
+  }
 }

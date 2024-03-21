@@ -12,4 +12,7 @@ export class MobileComponent implements OnInit{
   ngOnInit(): void {
   this.products = this.prodService.products.filter((x:any)=>x.type==='mobile')
   }
+  addItem(i:number){
+    this.prodService.selectProduct(i)
+  }
 }

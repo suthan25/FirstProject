@@ -14,8 +14,9 @@ export class UserLoginComponent implements OnInit{
     'margin-left':'60px',
     'margin-top':'4px'
   }
+  submitted:boolean = false
   form!: FormGroup;
-  constructor(private fb:FormBuilder,private router:Router,private userData:UserDetailsService){}
+  constructor(private fb:FormBuilder,private router:Router,public userData:UserDetailsService){}
   ngOnInit(): void {
     this.form = this.fb.group({
       username:['',[Validators.required,Validators.email,Validators.pattern('[a-zA-Z0-9]+@[a-z]+.[a-z]{1,3}')]],
@@ -23,10 +24,13 @@ export class UserLoginComponent implements OnInit{
     })
   }
   submit(){
-    if (this.form.valid && this.userData.userDetails.
-      find((x)=>x.username === this.form.value.username && x.pass === this.form.value.pass)) {
-      console.log(this.form.value)
-      this.router.navigate(['/home'])
+    if (this.form.valid) {
+        this.submitted = true
+      if (this.userData.userDetails.
+        find((x)=>x.username === this.form.value.username && x.pass === this.form.value.pass)) {
+          console.log(this.form.value)
+          this.router.navigate(['/home'])        
+      }
     } else {
       console.log('invalid',this.form.value)
     }

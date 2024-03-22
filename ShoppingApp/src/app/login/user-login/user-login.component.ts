@@ -9,6 +9,11 @@ import { UserDetailsService } from '../../service/user-details.service';
   styleUrl: './user-login.component.css'
 })
 export class UserLoginComponent implements OnInit{
+  style:object = {
+    'color':'red',
+    'margin-left':'60px',
+    'margin-top':'4px'
+  }
   form!: FormGroup;
   constructor(private fb:FormBuilder,private router:Router,private userData:UserDetailsService){}
   ngOnInit(): void {

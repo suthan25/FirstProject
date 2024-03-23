@@ -1,8 +1,15 @@
-<div class="prod-container">
-    <ul *ngFor="let key of products;let i = index" class="prod-list">
-    <li><img [src]="key.img" alt="prod-img"></li>
-    <li>Name : {{key.name}}</li>
-    <li class="rate">Rate : ₹{{key.rate}}</li>
-<li class="buy"><button type="button">buy</button></li>
-<li class="remove"><button type="button" (click)="removeItem(i)">remove</button></li></ul>
-</div>
+<ng-container *ngIf="products.length !== 0;else prodNotFound">
+    <div class="prod-container">
+        <ul *ngFor="let key of products;let i = index" class="prod-list">
+        <li><img [src]="key.img" alt="prod-img"></li>
+        <li>Name : {{key.name}}</li>
+        <li class="rate">Rate : ₹{{key.rate}}</li>
+    <li class="buy"><button type="button">buy</button></li>
+    <li class="remove"><button type="button" (click)="removeItem(i)">remove</button></li></ul>
+    </div>
+</ng-container>
+<ng-template #prodNotFound>
+    <div class="empty-cart"><img src="../../../assets/cart.webp" alt="" ></div>
+    <div class="empty-msg"><h4>Cart is empty!!</h4></div>
+    <button type="button" routerLink="/home" class="home">Home</button>
+</ng-template>

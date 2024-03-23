@@ -33,3 +33,32 @@ li button{
     color: rgb(39, 119, 43);
     transition: 0.015s;
 }
+.empty-cart img{
+    width: 27.5em;
+}
+.empty-cart{
+    margin-left: 25em;
+    margin-top: 5em;
+}
+.empty-msg{
+    margin-left: 33.7em;
+}
+h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: red;
+}
+.home{
+    border: 1px solid goldenrod;
+    background-color: transparent;
+    margin-left: 41.6em;
+    height: 2em;
+    width: 8em;
+    color: rgb(216, 172, 61);
+}
+.home:hover{
+    border: 1px solid gold;
+    transition: 0.7s;
+    color: rgba(240, 205, 11, 0.825);
+    box-shadow: 2px 2px 1px 2.1px rgb(248, 247, 247);
+}

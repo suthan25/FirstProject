@@ -62,3 +62,13 @@ h4{
     color: rgba(240, 205, 11, 0.825);
     box-shadow: 2px 2px 1px 2.1px rgb(248, 247, 247);
 }
+@media screen and (max-width:1180px) {
+    .prod-list{
+        box-shadow: 4px 4px 8px rgb(207, 204, 204);
+        width: 33%;
+        list-style-type: none;
+        margin-left: 4.2rem;
+        border-radius: 5px;
+        height: 21em;
+    }   
+}

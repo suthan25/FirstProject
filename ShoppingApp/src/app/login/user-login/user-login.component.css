@@ -58,3 +58,65 @@ button:active{
     transition: 0.015s;
     color: rgb(1, 45, 1);
 }
+@media screen and (max-width:1180px) {
+    .container{
+        height: 28em;
+        width: 24em;
+        box-shadow: 7px 6px 8px 6px rgb(227, 230, 235);
+        margin-left: 13.5em;
+        margin-top: 18em;
+        border-radius: 4px;
+    }
+    .logo{
+        height: 8em;
+        width: 10em;
+        margin-left: 6.7em;
+    }
+    img{
+        height: 8em;
+        width: 10em;
+    }
+    .user{
+        margin-top: 2em;
+    }
+    .form{
+        margin-left: 3.4em;
+    }
+    input{
+        outline: none;
+        border: none;
+        height: 33px;
+        text-indent: 1em;
+        box-shadow: 7px 6px 8px 6px rgb(227, 230, 235);
+        border-radius: 3px;
+    }
+    #userpass{
+        margin-top: 2em;
+    }
+    #log{
+        margin-top: 2em;
+    }
+    .username,.pass{
+        width: 20.5em;
+    }
+    button{
+        border: none;
+        height: 2.6em;
+        width: 21em;
+        background-color: rgb(13, 173, 13);
+        border-radius: 20px;
+        box-shadow: 7px 6px 8px 6px rgb(227, 235, 232);
+    }
+    input:focus{
+        border: 2px solid rgb(217, 224, 230);
+        border-radius: 3px;
+    }
+    #signin{
+        margin-top: 1em;
+    }
+    button:active{
+        background-color: rgb(14, 208, 10);
+        transition: 0.015s;
+        color: rgb(1, 45, 1);
+    }   
+}

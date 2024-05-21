@@ -1,0 +1,49 @@
+.prod-container{
+    height: 35em;
+    width: 30em;
+    box-shadow: 4px 4px 8px rgb(207, 204, 204);
+    margin-left: 23em;
+    margin-top: 1em;
+}
+ul li{
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    margin-left: 3em;
+}
+.head{
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 9em;
+    padding-top: 1.7em;
+}
+img{
+    margin-left: 1.7em;
+    box-shadow: 4px 4px 8px rgb(207, 204, 204);
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+.details{
+    padding-top: 0.6em;
+}
+.button{
+    margin-top: 1.5em;
+    background-color: rgb(233, 175, 27);
+    width: 19em;
+    height: 1.9em;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+}
+.prod-name{
+    margin-left: 5.7em;
+}
+.prod-rate{
+    margin-left: 6.3em;
+}
+.prod-total{
+    margin-left: 2.1em;
+}

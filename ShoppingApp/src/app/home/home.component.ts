@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { UserDetailsService } from '../service/user-details.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,7 @@ import { ProductsService } from '../products.service';
 export class HomeComponent implements OnInit{
   products:any
   term!:string
-  constructor(private service:ProductsService){}
+  constructor(private service:ProductsService , private buy:UserDetailsService,private route:Router){}
   ngOnInit(): void {
     this.products = this.service.products
   }
@@ -22,5 +24,14 @@ export class HomeComponent implements OnInit{
    x.type.toLowerCase() === term.toLowerCase())
     this.products = filter
     return this.products
+  }
+  public buyProduct(i:any){
+    // if(this.buy.buyProd.length === 0){
+    //   this.buy.buyProd.push(i)
+    //   console.log(this.buy.buyProd)
+    // }
+    this.buy.buyProd = this.service.products.filter((x)=>x===i)
+    console.log(this.service.products.filter((x)=>x===i))
+    this.route.navigate(['buy'])
   }
 }

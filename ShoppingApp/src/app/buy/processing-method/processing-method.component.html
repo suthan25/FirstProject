@@ -1,0 +1,11 @@
+<div class="prod-container">
+    <h4 class="head">Payment details</h4>
+    <ul *ngFor="let key of products;let i = index" class="prod-list">
+    <li><img [src]="key.img" alt="prod-img"></li>
+    <li class="details" style="font-size: 14px;">Name <span class="prod-name">: {{key.name}}</span></li>
+    <li class="rate" class="details" style="font-size: 14px;">Rate <span class="prod-rate">: ₹{{key.rate}}</span></li>
+    <li class="details" style="font-size: 14px;">Shipping charges <span>: ₹100</span></li>
+    <li class="details" style="font-size: 14px;">Total amount <span class="prod-total">: ₹{{key.rate+100}}</span></li>
+    <li class="button"><a routerLink="payOnline" style="font-size: 15px;color: black;">Pay ₹{{key.rate+100}}</a></li>
+    <li class="button"><a routerLink="cashOnDelivery" style="font-size: 15px;color: black;">Cash on delivery</a></li></ul>
+</div>

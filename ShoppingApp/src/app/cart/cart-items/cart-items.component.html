@@ -4,7 +4,7 @@
         <li><img [src]="key.img" alt="prod-img"></li>
         <li>Name : {{key.name}}</li>
         <li class="rate">Rate : ₹{{key.rate}}</li>
-    <li class="buy"><button type="button">buy</button></li>
+    <li class="buy"><button type="button" (click)="buyProduct(key)">buy</button></li>
     <li class="remove"><button type="button" (click)="removeItem(i)">remove</button></li></ul>
     </div>
 </ng-container>

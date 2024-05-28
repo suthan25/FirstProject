@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
   styleUrl: './user-sign-up.component.css'
 })
 export class UserSignUpComponent implements OnInit{
+  style:object = {
+    'color':'red',
+    'margin-left':'60px',
+    'margin-top':'4px'
+  }
   form!:FormGroup
   constructor(private fb:FormBuilder,private userData:UserDetailsService,
     private router:Router){}
@@ -21,6 +26,7 @@ export class UserSignUpComponent implements OnInit{
   }
   submit():any{
     if (this.form.valid && !this.userData.userDetails.includes(this.form.value)) {
+      this.form.value.cart = []
       this.userData.userDetails.push(this.form.value)
       console.log('registered',this.userData.userDetails)
       this.router.navigate(['/home'])

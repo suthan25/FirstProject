@@ -9,9 +9,15 @@
     <div class="form" id="userId">
         <input class="user" placeholder="Email" formControlName="username">
     </div>
+    <ng-container *ngIf="form.get('username')?.errors && form.get('username')?.touched 
+    || form.get('username')?.dirty && form.get('username')?.errors"><div [ngStyle]="style" style="font-size: 12px;font-variant: small-caps;">
+    username is required or invalid</div></ng-container>
     <div class="form" id="passwrd">
         <input class="pass" placeholder="password" formControlName="pass">
     </div>
+    <ng-container *ngIf="form.get('pass')?.errors && form.get('pass')?.dirty 
+    || form.get('pass')?.touched && form.get('pass')?.errors"><div [ngStyle]="style" style="font-size: 12px;font-variant: small-caps;">
+    password is required or invalid</div></ng-container>
     <div id="signin">
         <button type="submit">Sign in</button>
     </div>

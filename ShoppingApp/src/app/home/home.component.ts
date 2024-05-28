@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit{
     this.products = this.service.products
   }
   addCart(i:any){
-    this.service.selectProduct(i)
-    console.log(this.service.Selected)
+     this.service.selectProduct(i)
+     console.log('current ',this.buy.currentUser)
   }
   search(term:string){
    let filter = this.service.products.filter((x:any)=>x.name.toLowerCase() === term.toLowerCase()||

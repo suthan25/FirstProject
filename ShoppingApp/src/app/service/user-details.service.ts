@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class UserDetailsService {
   public userDetails:any[] = []
   public buyProd:any[] = []
+  public currentUser:any 
   constructor() { }
 }

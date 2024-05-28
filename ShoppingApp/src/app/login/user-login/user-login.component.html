@@ -12,7 +12,7 @@
     <ng-container *ngIf="!userData.userDetails.includes(form.value.username) && submitted">
         <div [ngStyle]="style" style="font-size: 12px;font-variant: small-caps;">userId doesn't exist</div></ng-container>
     <div class="passwrd" class="form" id="userpass">
-        <input class="pass" placeholder="password" formControlName="pass">
+        <input class="pass" placeholder="password" formControlName="pass" type="password">
     </div>
     <ng-container *ngIf="form.get('pass')?.errors && form.get('pass')?.dirty 
     || form.get('pass')?.touched && form.get('pass')?.errors"><div [ngStyle]="style" style="font-size: 12px;font-variant: small-caps;">

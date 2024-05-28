@@ -28,7 +28,6 @@ export class UserLoginComponent implements OnInit{
         this.submitted = true
       if (this.userData.userDetails.
         find((x)=>x.username === this.form.value.username && x.pass === this.form.value.pass)) {
-          console.log(this.form.value)
           this.router.navigate(['/home'])        
       }
     } else {

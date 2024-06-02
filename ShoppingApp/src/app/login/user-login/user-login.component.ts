@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserDetailsService } from '../../service/user-details.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-login',
@@ -28,6 +29,7 @@ export class UserLoginComponent implements OnInit{
         this.submitted = true
       if (this.userData.userDetails.
         find((x)=>x.username === this.form.value.username && x.pass === this.form.value.pass)) {
+          this.userData.user(this.form.value)
           this.router.navigate(['/home'])        
       }
     } else {

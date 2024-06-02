@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserDetailsService } from '../../service/user-details.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-sign-up',
@@ -28,7 +29,7 @@ export class UserSignUpComponent implements OnInit{
     if (this.form.valid && !this.userData.userDetails.includes(this.form.value)) {
       this.form.value.cart = []
       this.userData.userDetails.push(this.form.value)
-      console.log('registered',this.userData.userDetails)
+      this.userData.user({username:this.form.value.username,pass:this.form.value.pass})
       this.router.navigate(['/home'])
       return this.userData.userDetails
     } else {

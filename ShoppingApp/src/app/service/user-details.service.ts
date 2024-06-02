@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,12 @@ import { Injectable } from '@angular/core';
 export class UserDetailsService {
   public userDetails:any[] = []
   public buyProd:any[] = []
-  public currentUser:any 
+  private currentUser = new BehaviorSubject<any>(null) 
   constructor() { }
+  user(data:any){
+    this.currentUser.next(data)
+  }
+  get Data(){
+    return this.currentUser.asObservable()
+  }
 }

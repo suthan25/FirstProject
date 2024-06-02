@@ -10,14 +10,23 @@ import { UserDetailsService } from '../../service/user-details.service';
 })
 export class FashionComponent implements OnInit{
   products:any
+  currentUser:any
+  data:any
+  userData$:any
   constructor(private prodService:ProductsService,private route:Router,
     private buy:UserDetailsService
   ){}
   ngOnInit(): void {
     this.products = this.prodService.products.filter((x:any)=>x.type==='fashion')
+    this.userData$ = this.buy.Data.subscribe((x)=>this.data = x)
   }
   addItem(i:number){
-    this.prodService.selectProduct(i)
+    this.currentUser = this.buy.userDetails.find((x)=>x.username === this.data.username && x.pass === this.data.pass)
+     const cart = this.currentUser.cart as Array<any>
+     if (cart.indexOf(i)==-1) {
+      cart.push(i)
+      console.log(this.currentUser)
+     }
   }
   public buyProduct(i:any){
     this.buy.buyProd = this.prodService.products.filter((x)=>x===i)
